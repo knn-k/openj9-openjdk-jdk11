@@ -254,8 +254,12 @@ public class RegisteredCharsets {
                 });
 
         aliasCheck("GB18030",
+                "2000".equals(System.getProperty("jdk.charset.GB18030")) ?
                 new String[] {
                     "gb18030-2000"
+                } :
+                new String[] {
+                    "gb18030-2022"
                 });
 
         aliasCheck("ISO-2022-KR", new String[] {"csISO2022KR"});
